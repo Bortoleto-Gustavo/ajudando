@@ -1,0 +1,136 @@
+{
+  "resumo_projeto": "Sistema de agendamento de consultas para uma clínica veterinária com 5 unidades. Hoje o agendamento é feito por WhatsApp e Google Sheets, com muitos conflitos de horário. A solução desejada permite que o paciente marque a consulta sozinho, escolhendo o veterinário e o horário, e que a recepção visualize a agenda de todas as unidades. Há lembrete de um dia antes, com canal (WhatsApp ou e-mail) ainda não definido. O cancelamento será definido pela diretoria. Prazo desejado: ver o projeto antes do fim do ano. Orçamento ainda não definido.",
+  "requisitos": [
+    {
+      "id": "RQ001",
+      "tipo": "OBJETIVO",
+      "descricao": "Substituir o agendamento atual (WhatsApp e Google Sheets), que gera muitos conflitos de horário, por um sistema de agendamento para a clínica veterinária com 5 unidades.",
+      "status": "confirmado",
+      "evidencias": [
+        {
+          "fonte_id": "reuniao_01.txt",
+          "trecho": "A gente é uma clínica veterinária com 5 unidades. Hoje o agendamento é feito pelo WhatsApp e uso de google sheets, e dá muito conflito de horário."
+        }
+      ]
+    },
+    {
+      "id": "RQ002",
+      "tipo": "RF",
+      "descricao": "O paciente deve conseguir marcar a consulta sozinho, escolhendo o veterinário desejado e o horário escolhido.",
+      "status": "confirmado",
+      "evidencias": [
+        {
+          "fonte_id": "reuniao_01.txt",
+          "trecho": "Um sistema onde o paciente consiga marcar a consulta sozinho, escolhendo o veterinário desejado e o horário escolhido."
+        }
+      ]
+    },
+    {
+      "id": "RQ003",
+      "tipo": "RF",
+      "descricao": "A equipe da recepção deve conseguir visualizar a agenda de todas as unidades.",
+      "status": "confirmado",
+      "evidencias": [
+        {
+          "fonte_id": "reuniao_01.txt",
+          "trecho": "a equipe da recepção precisa ver a agenda de todas as unidades."
+        }
+      ]
+    },
+    {
+      "id": "RQ004",
+      "tipo": "RF",
+      "descricao": "O paciente deve receber um lembrete da consulta um dia antes. O canal de envio (WhatsApp ou e-mail) ainda não foi definido.",
+      "status": "a_confirmar",
+      "evidencias": [
+        {
+          "fonte_id": "reuniao_01.txt",
+          "trecho": "o paciente tem que receber um lembrete um dia antes."
+        }
+      ]
+    },
+    {
+      "id": "RQ005",
+      "tipo": "REGRA",
+      "descricao": "Não pode haver conflito de horário nos agendamentos.",
+      "status": "confirmado",
+      "evidencias": [
+        {
+          "fonte_id": "reuniao_01.txt",
+          "trecho": "Mas não pode haver conflito de horário."
+        }
+      ]
+    }
+  ],
+  "pendencias": [
+    {
+      "id": "P01",
+      "pergunta": "Por qual canal o lembrete de um dia antes será enviado: WhatsApp ou e-mail?",
+      "motivo": "A cliente disse não saber ainda se o lembrete será por WhatsApp ou e-mail.",
+      "requisito_relacionado": "RQ004",
+      "status": "aberta"
+    },
+    {
+      "id": "P02",
+      "pergunta": "Quais são as regras de cancelamento de consultas?",
+      "motivo": "A cliente disse que o cancelamento ainda será definido com a diretoria.",
+      "requisito_relacionado": null,
+      "status": "aberta"
+    },
+    {
+      "id": "P03",
+      "pergunta": "Qual é o orçamento disponível para o projeto?",
+      "motivo": "A cliente disse que precisa conversar sobre o orçamento; não há informação.",
+      "requisito_relacionado": null,
+      "status": "aberta"
+    },
+    {
+      "id": "P04",
+      "pergunta": "Qual é o prazo final para entrega do projeto? A cliente mencionou querer ver o projeto antes do fim do ano; confirmar se esse é o prazo definitivo e o que significa 'ver o projeto' (entrega, protótipo ou versão em produção).",
+      "motivo": "O prazo mencionado é vago e não há confirmação de data nem de escopo da entrega.",
+      "requisito_relacionado": null,
+      "status": "aberta"
+    },
+    {
+      "id": "P05",
+      "pergunta": "Os pacientes e veterinários da clínica serão cadastrados e gerenciados pelo sistema? Quais dados de cadastro são necessários?",
+      "motivo": "Não foi tratado nas fontes; necessário para definir o escopo de cadastros.",
+      "requisito_relacionado": null,
+      "status": "aberta"
+    },
+    {
+      "id": "P06",
+      "pergunta": "A agenda de cada veterinário é separada por unidade ou um veterinário pode atender em mais de uma unidade?",
+      "motivo": "A fonte fala em agenda de todas as unidades, mas não detalha a relação entre veterinários e unidades.",
+      "requisito_relacionado": "RQ002",
+      "status": "aberta"
+    },
+    {
+      "id": "P07",
+      "pergunta": "Quais tecnologias, plataformas (web, mobile) e integrações são esperadas, além do WhatsApp e e-mail citados?",
+      "motivo": "Nenhuma tecnologia foi definida nas fontes.",
+      "requisito_relacionado": null,
+      "status": "aberta"
+    },
+    {
+      "id": "P08",
+      "pergunta": "Como o sistema deve tratar o conflito de horário entre agendamentos feitos pelo paciente e os já existentes, e o que acontece quando o horário escolhido já foi ocupado?",
+      "motivo": "A fonte exige que não haja conflito de horário, mas não descreve o comportamento esperado na tentativa de agendar um horário ocupado.",
+      "requisito_relacionado": "RQ005",
+      "status": "aberta"
+    }
+  ],
+  "conflitos": [],
+  "notas_revisao": [
+    "RQ004: status alterado de confirmado para a_confirmar, pois o canal do lembrete (WhatsApp ou e-mail) não foi definido e a fonte diz 'Não sei ainda se por WhatsApp ou e-mail'; a descrição passou a registrar essa pendência.",
+    "RQ001: mantido como confirmado; trecho conferido literalmente com a fonte reuniao_01.txt.",
+    "RQ002, RQ003 e RQ005: trechos conferidos. RQ003 teve a evidência corrigida para o trecho literal com letra inicial maiúscula ('Ana' fala 'a equipe da recepção precisa ver a agenda de todas as unidades.'); o conteúdo permanece o mesmo.",
+    "RQ005: trecho conferido como literal; mantido como confirmado.",
+    "P01 mantida aberta e vinculada a RQ004; P02 a P07 preservadas sem alteração de ID ou conteúdo.",
+    "Adicionada P08 para o comportamento do sistema diante de horário já ocupado, ponto ambíguo não tratado nas fontes.",
+    "Conflitos: nenhum identificado; as falas são complementares e não se contradizem. Lista mantida vazia.",
+    "Resumo do projeto mantido: nenhuma informação foi acrescentada além do que está nas fontes.",
+    "Pendências P02 (cancelamento), P03 (orçamento) e P04 (prazo) permanecem abertas por falta de resposta; não foram transformadas em requisitos.",
+    "Verificação de IDs: RQ001 a RQ005 e P01 a P07 preservados; nova pendência numerada P08 segue a sequência."
+  ]
+}

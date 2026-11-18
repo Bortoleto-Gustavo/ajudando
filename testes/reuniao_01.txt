@@ -1,0 +1,10 @@
+Comercial: Então, Ana, me conta um pouco do que vocês precisam.
+Ana: A gente é uma clínica veterinária com 5 unidades. Hoje o agendamento é feito pelo WhatsApp e uso de google sheets, e dá muito conflito de horário.
+Comercial: E o que você quer como solução?
+Ana: Um sistema onde o paciente consiga marcar a consulta sozinho, escolhendo o veterinário desejado e o horário escolhido. E a equipe da recepção precisa ver a agenda de todas as unidades.
+Comercial: Algum tipo de lembrete?
+Ana: Sim, o paciente tem que receber um lembrete um dia antes. Não sei ainda se por WhatsApp ou e-mail.
+Comercial: E cancelamento?
+Ana: Isso a gente ainda vai definir com a diretoria. Mas não pode haver conflito de horário.
+Comercial: Qual é o prazo final e orçamento?
+Ana: Queria ver o projeto antes do fim do ano, mas orçamento eu preciso conversar.

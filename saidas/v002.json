@@ -1,0 +1,177 @@
+{
+  "resumo_projeto": "Sistema de agendamento de consultas para uma clínica veterinária com 5 unidades. Hoje o agendamento é feito por WhatsApp e Google Sheets, com muitos conflitos de horário. A solução desejada permite que o paciente marque a consulta sozinho, escolhendo o veterinário e o horário, e que a recepção visualize a agenda de todas as unidades. Há lembrete de um dia antes, agora definido como enviado por WhatsApp (fonte reuniao_02.txt). O cancelamento foi parcialmente definido: o paciente pode cancelar até 24 horas antes do horário marcado; depois disso, deve entrar em contato diretamente com a recepção. Pacientes e veterinários serão cadastrados pela equipe da recepção. Prazo desejado: ver o projeto antes do fim do ano. Orçamento ainda não definido.",
+  "requisitos": [
+    {
+      "id": "RQ001",
+      "tipo": "OBJETIVO",
+      "descricao": "Substituir o agendamento atual (WhatsApp e Google Sheets), que gera muitos conflitos de horário, por um sistema de agendamento para a clínica veterinária com 5 unidades.",
+      "status": "confirmado",
+      "evidencias": [
+        {
+          "fonte_id": "reuniao_01.txt",
+          "trecho": "A gente é uma clínica veterinária com 5 unidades. Hoje o agendamento é feito pelo WhatsApp e uso de google sheets, e dá muito conflito de horário."
+        }
+      ]
+    },
+    {
+      "id": "RQ002",
+      "tipo": "RF",
+      "descricao": "O paciente deve conseguir marcar a consulta sozinho, escolhendo o veterinário desejado e o horário escolhido.",
+      "status": "confirmado",
+      "evidencias": [
+        {
+          "fonte_id": "reuniao_01.txt",
+          "trecho": "Um sistema onde o paciente consiga marcar a consulta sozinho, escolhendo o veterinário desejado e o horário escolhido."
+        }
+      ]
+    },
+    {
+      "id": "RQ003",
+      "tipo": "RF",
+      "descricao": "A equipe da recepção deve conseguir visualizar a agenda de todas as unidades.",
+      "status": "confirmado",
+      "evidencias": [
+        {
+          "fonte_id": "reuniao_01.txt",
+          "trecho": "a equipe da recepção precisa ver a agenda de todas as unidades."
+        }
+      ]
+    },
+    {
+      "id": "RQ004",
+      "tipo": "RF",
+      "descricao": "O paciente deve receber um lembrete da consulta um dia antes, enviado por WhatsApp.",
+      "status": "confirmado",
+      "evidencias": [
+        {
+          "fonte_id": "reuniao_01.txt",
+          "trecho": "o paciente tem que receber um lembrete um dia antes."
+        },
+        {
+          "fonte_id": "reuniao_02.txt",
+          "trecho": "decidimos que serão enviados por WhatsApp, um dia antes da consulta."
+        }
+      ]
+    },
+    {
+      "id": "RQ005",
+      "tipo": "REGRA",
+      "descricao": "Não pode haver conflito de horário nos agendamentos.",
+      "status": "confirmado",
+      "evidencias": [
+        {
+          "fonte_id": "reuniao_01.txt",
+          "trecho": "Mas não pode haver conflito de horário."
+        }
+      ]
+    },
+    {
+      "id": "RQ006",
+      "tipo": "REGRA",
+      "descricao": "O paciente pode cancelar a consulta até 24 horas antes do horário marcado. Após esse período, deve entrar em contato diretamente com a recepção.",
+      "status": "confirmado",
+      "evidencias": [
+        {
+          "fonte_id": "reuniao_02.txt",
+          "trecho": "o paciente poderá cancelar até 24 horas antes do horário marcado."
+        },
+        {
+          "fonte_id": "reuniao_02.txt",
+          "trecho": "Depois desse período, deverá entrar em contato diretamente com a recepção."
+        }
+      ]
+    },
+    {
+      "id": "RQ007",
+      "tipo": "RF",
+      "descricao": "Os pacientes e veterinários são cadastrados pela equipe da recepção.",
+      "status": "confirmado",
+      "evidencias": [
+        {
+          "fonte_id": "reuniao_02.txt",
+          "trecho": "Os pacientes e veterinários serão cadastrados pela equipe da recepção."
+        }
+      ]
+    }
+  ],
+  "pendencias": [
+    {
+      "id": "P01",
+      "pergunta": "Por qual canal o lembrete de um dia antes será enviado: WhatsApp ou e-mail?",
+      "motivo": "Respondida em reuniao_02.txt: o lembrete será enviado por WhatsApp.",
+      "requisito_relacionado": "RQ004",
+      "status": "respondida"
+    },
+    {
+      "id": "P02",
+      "pergunta": "Quais são as regras de cancelamento de consultas além do prazo de 24 horas e do contato com a recepção? Há taxas ou penalidades? O que ocorre após o cancelamento?",
+      "motivo": "reuniao_02.txt trata apenas do prazo de 24 horas e do contato com a recepção depois desse prazo. Detalhes complementares não foram tratados nas fontes; a diretoria ainda deve confirmar as regras.",
+      "requisito_relacionado": "RQ006",
+      "status": "aberta"
+    },
+    {
+      "id": "P03",
+      "pergunta": "Qual é o orçamento disponível para o projeto?",
+      "motivo": "A cliente disse que precisa conversar sobre o orçamento; não há informação.",
+      "requisito_relacionado": null,
+      "status": "aberta"
+    },
+    {
+      "id": "P04",
+      "pergunta": "Qual é o prazo final para entrega do projeto? A cliente mencionou querer ver o projeto antes do fim do ano; confirmar se esse é o prazo definitivo e o que significa 'ver o projeto' (entrega, protótipo ou versão em produção).",
+      "motivo": "O prazo mencionado é vago e não há confirmação de data nem de escopo da entrega.",
+      "requisito_relacionado": null,
+      "status": "aberta"
+    },
+    {
+      "id": "P05",
+      "pergunta": "Além do cadastro feito pela equipe da recepção, o sistema também gerenciará esses cadastros? Quais dados de cadastro de pacientes e veterinários são necessários?",
+      "motivo": "reuniao_02.txt define que o cadastro será feito pela equipe da recepção. Ainda faltam os dados de cadastro necessários e se o sistema também gerenciará esses cadastros.",
+      "requisito_relacionado": "RQ007",
+      "status": "aberta"
+    },
+    {
+      "id": "P06",
+      "pergunta": "A agenda de cada veterinário é separada por unidade ou um veterinário pode atender em mais de uma unidade?",
+      "motivo": "A fonte fala em agenda de todas as unidades, mas não detalha a relação entre veterinários e unidades.",
+      "requisito_relacionado": "RQ002",
+      "status": "aberta"
+    },
+    {
+      "id": "P07",
+      "pergunta": "Quais tecnologias, plataformas (web, mobile) e integrações são esperadas, além do WhatsApp citado para lembretes?",
+      "motivo": "Nenhuma tecnologia ou plataforma foi definida nas fontes.",
+      "requisito_relacionado": null,
+      "status": "aberta"
+    },
+    {
+      "id": "P08",
+      "pergunta": "Como o sistema deve tratar o conflito de horário entre agendamentos feitos pelo paciente e os já existentes, e o que acontece quando o horário escolhido já foi ocupado?",
+      "motivo": "A fonte exige que não haja conflito de horário, mas não descreve o comportamento esperado na tentativa de agendar um horário ocupado.",
+      "requisito_relacionado": "RQ005",
+      "status": "aberta"
+    },
+    {
+      "id": "P09",
+      "pergunta": "O WhatsApp é o único canal de envio do lembrete de um dia antes? Há necessidade de e-mail como alternativa ou complemento?",
+      "motivo": "reuniao_01.txt indica dúvida entre WhatsApp e e-mail; reuniao_02.txt define WhatsApp. Não há confirmação explícita de que o e-mail foi descartado.",
+      "requisito_relacionado": "RQ004",
+      "status": "aberta"
+    }
+  ],
+  "conflitos": [],
+  "notas_revisao": [
+    "RQ004: status mantido como confirmado; trecho de reuniao_02.txt conferido literalmente ('decidimos que serão enviados por WhatsApp, um dia antes da consulta.'). Trecho de reuniao_01.txt ('o paciente tem que receber um lembrete um dia antes.') mantido, pois a fonte reuniao_01.txt não foi enviada nesta revisão e não foi conferida diretamente.",
+    "RQ001, RQ002, RQ003 e RQ005: mantidos com as evidências de reuniao_01.txt; ressalva: essa fonte não foi fornecida nesta rodada, então os trechos não puderam ser conferidos literalmente e permanecem sob verificação.",
+    "RQ006 e RQ007: trechos conferidos literalmente contra reuniao_02.txt; sem alteração.",
+    "P01: marcada como respondida; a resposta (WhatsApp) está em reuniao_02.txt.",
+    "P02: pergunta ampliada para incluir taxas, penalidades e consequências do cancelamento, pois o motivo antes citava esses pontos sem que a pergunta os contemplasse; status mantido como aberta.",
+    "P05: pergunta ajustada para separar cadastro pela recepção (já respondido em reuniao_02.txt) da questão de gestão pelo sistema e dos dados necessários (ainda abertos); status mantido como aberta.",
+    "P07: pergunta ajustada para citar apenas o WhatsApp, pois o e-mail não aparece como integração confirmada em nenhuma fonte fornecida nesta rodada.",
+    "P09: motivo ajustado: reuniao_01.txt não foi fornecida nesta rodada, então a afirmação de que ela 'dizia não saber' não pôde ser verificada literalmente; a pergunta permanece aberta.",
+    "P03, P04, P06 e P08: mantidas sem alteração de conteúdo.",
+    "Conflitos: nenhum conflito registrado. A possível mudança de WhatsApp/e-mail não é contradição clara entre as fontes disponíveis; tratada em P09.",
+    "Resumo do projeto: mantido, mas observado que as informações sobre 5 unidades, Google Sheets e prazo vêm de reuniao_01.txt, não conferível nesta rodada.",
+    "IDs preservados: RQ001 a RQ005 e P01 a P08 mantidos; novos itens RQ006, RQ007 e P09 mantidos. Nenhum novo ID criado nesta revisão."
+  ]
+}

@@ -1,0 +1,6 @@
+crewai[anthropic]
+pydantic>=2
+python-dotenv
+
+fastapi
+uvicorn
